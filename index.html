@@ -2,104 +2,104 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Instituto Ana Fernandes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fonte contemporânea do Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --rox-escuro: #3D144C;
+      --amarelo-dourado: #E4C374;
+      --rox-escuro-transparente: rgba(61, 20, 76, 0.95);
+      --cinza-claro: #f6f6f6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth;}
     body {
-      background: #3D144C;
-      color: #E4C374;
-      font-family: 'Georgia', serif;
-      margin: 0;
+      background: var(--rox-escuro);
+      color: var(--amarelo-dourado);
+      font-family: 'Inter', Arial, Helvetica, sans-serif;
+      line-height: 1.6;
     }
     .container {
-      max-width: 900px;
+      max-width: 1050px;
       margin: 0 auto;
-      padding: 2em;
-      background: rgba(61, 20, 76, 0.95);
-      border-radius: 16px;
-      box-shadow: 0 0 16px #3D144C;
+      padding: 2em 1em;
     }
-    header img {
-      display: block;
-      margin: 2em auto 1em auto;
-      width: 150px;
-      height: auto;
-      border-radius: 12px;
-    }
-    h1, h2, h3 {
-      color: #E4C374;
-    }
-    nav a {
-      color: #E4C374;
-      text-decoration: none;
-      padding: 0.5em 1em;
-      margin: 0 0.5em;
-      border-radius: 5px;
-      background: #3D144C;
-      font-weight: 700;
-    }
-    nav a:hover {
-      background: #E4C374;
-      color: #3D144C;
-    }
-    section {
+    header {
+      text-align: center;
       margin-bottom: 2em;
     }
-    .blog-section {
-      margin-top: 2em;
-      padding: 1em;
-      background: #4B235F;
+    .logo {
+      max-width: 180px;
+      margin: 2em auto 1em auto;
+      display: block;
+      border-radius: 18px;
+      box-shadow: 0 6px 40px 0 #2b0d37;
+    }
+    nav {
+      margin: 1em auto 2em auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1em;
+    }
+    nav a {
+      color: var(--amarelo-dourado);
+      background: transparent;
+      padding: 0.5em 1.2em;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 22px;
+      font-size: 1rem;
+      transition: background 0.3s, color 0.3s;
+    }
+    nav a:hover, nav a.active {
+      background: var(--amarelo-dourado);
+      color: var(--rox-escuro);
+    }
+    section {
+      background: var(--rox-escuro-transparente);
+      border-radius: 20px;
+      margin-bottom: 2em;
+      padding: 2em 1.5em;
+      box-shadow: 0 4px 24px 0 #200b2d2e;
+    }
+    h1, h2, h3 {
+      color: var(--amarelo-dourado);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .profissionais-lista {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.7em;
+      justify-content: start;
+      margin-top: 1em;
+    }
+    .profissional-card {
+      background: #220b2c;
+      border: 1px solid var(--amarelo-dourado);
       border-radius: 12px;
+      flex: 1 1 230px;
+      max-width: 250px;
+      min-width: 180px;
+      padding: 1em;
+      color: var(--amarelo-dourado);
+      box-shadow: 0 1px 4px #210a29a7;
+      transition: transform 0.2s;
     }
-    footer {
-      text-align: center;
-      padding: 2em;
-      color: #E4C374;
+    .profissional-card:hover {
+      transform: translateY(-7px) scale(1.04);
+      box-shadow: 0 10px 24px #210a29c9;
+      background: #3e1450;
     }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <img src="Psicologa-itajuba-foto-logo.png" alt="Logo Instituto Ana Fernandes">
-      <h1>Instituto Ana Fernandes</h1>
-      <nav>
-        <a href="#quem-somos">Quem Somos</a>
-        <a href="#profissionais">Profissionais</a>
-        <a href="#blog">Blog</a>
-        <a href="#contato">Contato</a>
-      </nav>
-    </header>
-    <section id="quem-somos">
-      <h2>Sobre o local e missão</h2>
-      <p>O propósito do Instituto Ana Fernandes é criar um espaço onde o desenvolvimento pessoal e o conhecimento técnico possam florescer, impactando diretamente o bem-estar emocional de seus pacientes e a capacitação. O Instituto posiciona como um lugar de crescimento, tanto no nível individual (pacientes) quanto no profissional (formação).<br>
-      A missão é apoiar, acolher e capacitar, unindo prática clínica de alta qualidade com um modelo educacional que prepara profissionais.</p>
-    </section>
-    <section id="profissionais">
-      <h2>Profissionais</h2>
-      <ul>
-        <li>Ana Fernandes – Psicóloga e Fundadora</li>
-        <!-- Adicione novos profissionais aqui -->
-      </ul>
-    </section>
-    <section class="blog-section" id="blog">
-      <h2>Postagens</h2>
-      <ul>
-        <li><a href="posts/post1.html">Título da Postagem 1</a> - 01/10/2025</li>
-        <!-- Adicione novas postagens conforme necessário -->
-      </ul>
-    </section>
-    <section id="contato">
-      <h2>Contato</h2>
-      <p>Email: contato@anafernandes.com<br>
-        Telefone: (xx) xxxx-xxxx<br>
-        Endereço: Rua Exemplo, 123 - Itajubá, MG
-      </p>
-    </section>
-    <footer>
-      &copy; 2025 Instituto Ana Fernandes - Todos os direitos reservados.
-    </footer>
-  </div>
-</body>
-</html>
-
+    .blog-lista {
+      list-style: none;
+      margin-top: 1em;
+    }
+    .blog-lista li {
+      margin-bottom: 0.9em;
+      border-left: 4px solid var(--amarelo-dourado);
+      padding-left: 0.8em;
+      background: #
